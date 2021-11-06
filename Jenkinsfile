@@ -40,7 +40,7 @@ pipeline {
           steps {
             input 'Deploy to Production?'
                 milestone(2)
-                withCredentials([usernamePassword(credentialsId: 'passwduser', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
+                withCredentials([usernamePassword(credentialsId: 'host1-pass', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
                             script {
                                 sh "sshpass -p '$USERPASS' -v ssh -o StrictHostKeyChecking=no $USERNAME@$prod_ip \"docker rm -f test-web \""
                                 sh "sshpass -p '$USERPASS' -v ssh -o StrictHostKeyChecking=no $USERNAME@$prod_ip \"docker rmi -f nurzada/website \""
