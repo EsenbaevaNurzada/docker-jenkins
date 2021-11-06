@@ -1,7 +1,7 @@
 pipeline {
     agent any
         environment {
-      DOCKERHUB_CREDENTIALS=credentials('docker')
+    DOCKERHUB_CREDENTIALS=credentials('docker')
     prod_ip='54.175.159.241'
     dev_ip='100.26.156.37'
   }
