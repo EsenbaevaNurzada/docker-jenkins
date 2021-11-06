@@ -2,8 +2,8 @@ pipeline {
     agent any
         environment {
     DOCKERHUB_CREDENTIALS=credentials('docker-hub')
-    prod_ip='3.92.234.186'
-    dev_ip='18.205.114.120'
+    prod_ip='54.175.159.241'
+    dev_ip='100.26.156.37'
   }
     stages {
         stage("Build") {
