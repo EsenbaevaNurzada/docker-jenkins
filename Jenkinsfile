@@ -12,7 +12,7 @@ pipeline {
                  }
         stage("Push") {
             steps {
-                 withDockerRegistry([ credentialsId: "docker.hub.cred", url: "" ]) {
+                 withDockerRegistry([ credentialsId: "docker", url: "" ]) {
                   sh  'docker push nurzada/website'
                }
             }
